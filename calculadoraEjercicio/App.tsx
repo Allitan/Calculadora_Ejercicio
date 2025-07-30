@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, SafeAreaView } from 'react-native';
-import { ResultadoEjercicio } from '../Modelos/ResultadoEjercicio';
-import { ResultadoEntrenamiento } from '../Components/ResultadoEntrenamiento';
+import { ResultadoEjercicio } from './Modelos/ResultadoEjercicio';
+import { ResultadoEntrenamiento } from './Components/ResultadoEntrenamiento';
 import React from 'react';
 
 function calcularEjercicio(horas: number[], objetivo: number): ResultadoEjercicio {
@@ -37,7 +37,7 @@ function calcularEjercicio(horas: number[], objetivo: number): ResultadoEjercici
 }
 
 export default function App() {
-  const horas = [3, 0, 2, 1, 0, 3, 1];
+  const horas = [3, 2, 0, 2, 2, 3, 1];
   const objetivo = 2;
 
   const resultado = calcularEjercicio(horas, objetivo);
